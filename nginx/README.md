@@ -1,1 +1,0 @@
-# Nginx simple implementations
