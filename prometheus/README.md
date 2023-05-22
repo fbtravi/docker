@@ -5,7 +5,8 @@
 * This requerid docker running in SO
 * Instaled docker compose
 
-```docker-compose up --build
+```bash
+docker-compose up --build
 ```
 
 ## Testings
