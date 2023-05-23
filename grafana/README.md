@@ -1,4 +1,4 @@
-# Prometheus simple config
+# Grafana simple config
 
 ## For run linux
 
@@ -13,12 +13,11 @@ docker-compose up --build
 
 In your browser assesing:
 
-<http://localhost:9090> open interface the Prometheus
+<http://localhost:3000> open interface the Grafana
 
 ## Functions of each file in this template
 
 * docker-compose.yml -> create configs form run docker at docker compose
-* mount_point -> mount_point for prometheus using
-* mount_point/prometheus.yml -> configuration of prometheus
+  * In environment tag have credentions at login
 
 * This template an example, for inspirantiom in your project.
