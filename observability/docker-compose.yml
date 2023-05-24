@@ -1,0 +1,35 @@
+version: "3"
+
+services:
+  node_exporter:
+    image: prom/node-exporter
+    container_name: node_exporter_observability
+    ports:
+      - 9100:9100
+    restart: unless-stopped
+  prometheus:
+    image: prom/prometheus
+    container_name: prometheus_observability
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+    ports:
+      - 9090:9090
+    restart: unless-stopped
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+      - prom_data:/prometheus
+  grafana:
+    image: grafana/grafana
+    container_name: grafana_observability
+    ports:
+      - 3000:3000
+    restart: unless-stopped
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=grafana
+    volumes:
+      - ./grafana/node-exporter.json:/etc/grafana/dashboards/
+      - ./grafana/dashboards.yml:/etc/grafana/provisioning/dashboards/dashboards.yml
+      - ./grafana/datasources.yml:/etc/grafana/provisioning/datasources/datasources.yml
+volumes:
+  prom_data:

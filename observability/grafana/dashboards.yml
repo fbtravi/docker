@@ -1,0 +1,9 @@
+apiVersion: 1
+
+providers:
+  - name: Four Keys
+    type: file
+    updateIntervalSeconds: 100
+    allowUiUpdates: true
+    options:
+      path: /etc/grafana/dashboards
