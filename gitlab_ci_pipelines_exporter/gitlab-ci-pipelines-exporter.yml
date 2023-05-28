@@ -1,0 +1,13 @@
+log:
+  level: debug
+gitlab:
+  url: https://gitlab.com
+project_defaults:
+  pull:
+    pipeline:
+      jobs:
+        enabled: true
+
+# Example public projects to monitor
+projects:
+  - name: your_projetc/path
