@@ -11,3 +11,8 @@ services:
     restart: unless-stopped
     volumes:
       - ./mount_point:/etc/prometheus
+    networks:
+      prometheus_net:
+networks:
+  prometheus_net:
+    name: prometheus_net
