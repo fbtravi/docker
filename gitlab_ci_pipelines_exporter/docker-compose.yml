@@ -14,7 +14,7 @@ services:
         source: ./gitlab-ci-pipelines-exporter.yml
         target: /etc/gitlab-ci-pipelines-exporter.yml
     networks:
-      prometheus_net:
+      fbtravi_net:
 networks:
-  prometheus_net:
-    name: prometheus_net
+  fbtravi_net:
+    name: fbtravi_net
