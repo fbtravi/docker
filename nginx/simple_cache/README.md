@@ -6,8 +6,8 @@ This Nginx have three locations:
 * /nocache - > Nginx not preserver cache
 * / -> Nginx not preserver cache
 
-These locations send requests to an app_flask, which is in
-[this projects](https://github.com/fbtravi/apps/tree/main).
+These locations send requests to an simple_app_flask, which is in
+[this projects](https://github.com/fbtravi/docker).
 Just start before this app.
 
 ## For run linux
@@ -41,3 +41,8 @@ location / {
 * nginx/nginx.conf -> configuration of nginx
 
 * This template an example, for inspirantiom in your project.
+
+## Network
+
+This project is configured with network standard <fbtravi_net>, this
+configuration serves to communicate all docker's of my other projects.
