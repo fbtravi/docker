@@ -9,3 +9,8 @@ services:
      - ./index.html:/etc/nginx/html/index.html
     ports:
      - "8080:8080"
+    networks:
+      fbtravi_net:
+networks:
+  fbtravi_net:
+    name: fbtravi_net

@@ -24,3 +24,8 @@ In your browser assesing:
 * nginx.conf -> configuration of nginx
 
 * This template an example, for inspirantiom in your project.
+
+## Network
+
+This project is configured with network standard <fbtravi_net>, this
+configuration serves to communicate all docker's of my other projects.
