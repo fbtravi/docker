@@ -1,6 +1,6 @@
 # Simple cache Nginx
 
-This Nginx have tree locations:
+This Nginx have three locations:
 
 * /cache - > Nginx preserver cache per 5m
 * /nocache - > Nginx not preserver cache
